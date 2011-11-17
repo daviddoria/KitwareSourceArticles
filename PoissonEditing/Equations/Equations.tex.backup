@@ -1,0 +1,184 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+%\usepackage{preview}
+
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{equation, align}
+
+% if 'active' isn't used, nothing will happen
+\usepackage[active,displaymath,tightpage]{preview}
+
+\begin{document}
+
+% Once the pdf is created with one equation on each page, use the following to convert each one to pngs:
+
+% gs -sDEVICE=png16m -dTextAlphaBits=4 -r300
+% -dGraphicsAlphaBits=4 -dSAFER -q -dNOPAUSE
+% -sOutputFile=<outputfile>%d.png <inputfile>.pdf -dBATCH
+% Then to remove extra whitespace:
+% pdfcrop output.pdf
+
+\begin{equation*}
+\nabla^2 H = 0
+\end{equation*}
+
+\begin{equation*}
+ \nabla^2 f = \sum_{i=1}^n \frac{\partial^2 f}{\partial x_i^2}
+\end{equation*}
+
+\begin{equation*}
+ \nabla^2 f(x,y) \approx f(x-1,y) + f(x+1,y) + f(x,y-1) + f(x,y+1) - 4f(x,y)
+\end{equation*}
+
+\begin{equation*}
+K = 
+\begin{pmatrix}
+0 & 1 & 0 \\
+1 & -4 & 1\\
+0 & 1 & 0
+\end{pmatrix}
+\end{equation*}
+
+\begin{equation*}
+-4 u_{i,j} + u_{i+1,j} + u_{i-1,j} + u_{i,j+1} + u_{i,j-1} = 0
+\end{equation*}
+
+\begin{equation*}
+ U^T H_v = b
+\end{equation*}
+
+\begin{equation*}
+\nabla^2 H = div(G)
+\end{equation*}
+
+\begin{equation*}
+G = \nabla S
+\end{equation*}
+
+\begin{equation*}
+\nabla^2 H = div(\nabla S)
+\end{equation*}
+
+\begin{equation*}
+-4 u_{i,j} + u_{i+1,j} + u_{i-1,j} + u_{i,j+1} + u_{i,j-1} \approx \nabla^2 S(i,j)
+\end{equation*}
+
+\begin{equation*}
+ U^T H_v = b
+\end{equation*}
+
+\begin{align*}
+\frac{d}{dx}(U) = D_x\\
+\frac{d}{dy}(U) = D_y
+\end{align*}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+
+    \begin{equation*}
+    S_x =
+    \begin{pmatrix}
+    -1 & 0 & 1 \\
+    -2 & 0 & 2\\
+    -1 & 0 & 1
+    \end{pmatrix}
+    \end{equation*}
+
+  \end{minipage}
+    \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+
+    \begin{equation*}
+    S_y =
+    \begin{pmatrix}
+    -1 & -2 & -1 \\
+    0 & 0 & 0\\
+    1 & 2 & 1
+    \end{pmatrix}
+    \end{equation*}
+
+  \end{minipage}
+\end{figure}
+
+\begin{align*}
+	- u_{i-1,j-1} -2 u_{i-1,j} - u_{i-1,j+1} + u_{i+1,j+1} + 2 u_{i+1,j} + u_{i,j+1} = D_x(i,j)\\
+	- u_{i-1,j-1} -2 u_{i,j-1} - u_{i+1,j+1} + u_{i-1,j-1} + 2 u_{i,j+1} + u_{i+1,j+1} = D_y(i,j)
+\end{align*}
+
+\begin{equation*}
+\nabla^2 I = div(\nabla I)
+\end{equation*}
+
+\begin{equation*}
+\nabla I (i,j) = (D_x(i,j), D_y(i,j)) 
+\end{equation*}
+
+\begin{equation*}
+\nabla I^2(i,j) = \frac{\partial D_x(i,j)}{\partial x} + \frac{\partial D_y(i,j)}{\partial y}
+\end{equation*}
+
+\begin{equation*}
+\begin{pmatrix}
+0 & 1 & 0 \\
+1 & -4 & 1\\
+0 & 1 & 0
+\end{pmatrix}
+\end{equation*}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+
+    \begin{equation*}
+    \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & -1 & 1\\
+    0 & 0 & 0
+    \end{pmatrix}
+    \end{equation*}
+
+  \end{minipage}
+    \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+
+    \begin{equation*}
+    \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & -1 & 0\\
+    0 & 1 & 0
+    \end{pmatrix}
+    \end{equation*}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+
+    \begin{equation*}
+    \begin{pmatrix}
+    0 & 0 & 0 \\
+    -1 & 1 & 0\\
+    0 & 0 & 0
+    \end{pmatrix}
+    \end{equation*}
+
+  \end{minipage}
+    \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+
+    \begin{equation*}
+    \begin{pmatrix}
+    0 & -1 & 0 \\
+    0 & 1 & 0\\
+    0 & 0 & 0
+    \end{pmatrix}
+    \end{equation*}
+
+  \end{minipage}
+\end{figure}
+
+
+\end{document}

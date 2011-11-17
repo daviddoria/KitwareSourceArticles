@@ -1,0 +1,28 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage[active,displaymath,tightpage]{preview}
+
+
+% Once the pdf is created with one equation on each page, use the following to convert each one to pngs:
+
+% gs -sDEVICE=png16m -dTextAlphaBits=4 -r300 -dGraphicsAlphaBits=4 -dSAFER -q -dNOPAUSE -sOutputFile=<outputfile>%d.png <inputfile>.pdf -dBATCH
+% Then to remove extra whitespace:
+% pdfcrop output.pdf
+
+
+\begin{document}
+
+\begin{equation*}
+P(p) = C(p)D(p)
+\end{equation*}
+
+\begin{equation*}
+ C(p) = \frac{\sum \mbox{Confidences of patch pixels in the source region}}{\mbox{Area of the patch}}
+\end{equation*}
+
+\begin{equation*}
+ D(p) = \frac{\mbox{dot}(\mbox{isophote}, \mbox{boundary normal})}{\alpha}
+\end{equation*}
+
+\end{document}
